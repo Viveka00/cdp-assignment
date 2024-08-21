@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accept and Reject</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        text-align: center;
+        margin-top: 50px;
+              }
+    #backgroundImage {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+        display: none;
+    }
+    .acceptBtn {
+    
+        
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+         
+    }
+    .rejectBtn {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+         
+    }
+    
+</style>
+</head>
+<body>
+ <div class="container"> 
+    <button id="acceptBtn">Accept</button>
+    <button id="rejectBtn">Reject</button>
+</div>
+<div id="backgroundImage"></div>
+
+<script>
+    const acceptBtn = document.getElementById('acceptBtn');
+    const rejectBtn = document.getElementById('rejectBtn');
+    const backgroundImage = document.getElementById('backgroundImage');
+
+    acceptBtn.addEventListener('click', function() {
+        backgroundImage.style.backgroundImage = "url('acpt.jpeg')";
+        backgroundImage.style.display = 'block';
+
+        
+    });
+        
+    
+
+    rejectBtn.addEventListener('click', function() {
+        backgroundImage.style.backgroundImage = "url('rgct.jpeg')";
+        backgroundImage.style.display = 'block';
+    });
+</script>
+</body>
+</html>
